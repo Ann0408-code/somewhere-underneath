@@ -1,0 +1,1184 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+
+:root {
+
+  --bg:
+    #11110f;
+
+  --text:
+    #dedbd3;
+
+  --muted:
+    #77756f;
+
+  --faint:
+    #3d3c38;
+
+  --accent:
+    #6f292d;
+
+}
+
+
+* {
+  box-sizing:
+    border-box;
+}
+
+
+html,
+body {
+
+  width:
+    100%;
+
+  min-height:
+    100%;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  background:
+    var(--bg);
+
+  color:
+    var(--text);
+
+}
+
+
+body {
+
+  min-height:
+    100vh;
+
+  overflow:
+    hidden;
+
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+}
+
+
+/* =========================================================
+   GRAIN
+   ========================================================= */
+
+
+body::before {
+
+  content:
+    "";
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    9999;
+
+  pointer-events:
+    none;
+
+  opacity:
+    0.045;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='.7'/%3E%3C/svg%3E");
+
+}
+
+
+/* =========================================================
+   GENERIC SCREEN
+   ========================================================= */
+
+
+.screen {
+
+  position:
+    relative;
+
+  width:
+    100vw;
+
+  height:
+    100vh;
+
+  min-height:
+    620px;
+
+}
+
+
+/* =========================================================
+   RETURN BUTTON
+   Shared by archive pages
+   ========================================================= */
+
+
+.return-button {
+
+  position:
+    absolute;
+
+  top:
+    42px;
+
+  left:
+    52px;
+
+  z-index:
+    50;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  padding:
+    8px 0;
+
+  border:
+    none;
+
+  background:
+    none;
+
+  color:
+    #4a4944;
+
+  text-decoration:
+    none;
+
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.22em;
+
+  cursor:
+    pointer;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+
+}
+
+
+.return-button:hover {
+
+  color:
+    var(--text);
+
+  transform:
+    translateX(-4px);
+
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+
+.home-screen {
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  width:
+    100vw;
+
+  height:
+    100vh;
+
+  min-height:
+    620px;
+
+  background:
+    var(--bg);
+
+  opacity:
+    1;
+
+  visibility:
+    visible;
+
+  transition:
+    opacity 0.9s ease,
+    visibility 0.9s ease;
+
+}
+
+
+.home-screen.hidden {
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+}
+
+
+/* =========================================================
+   HOME / TOP
+   ========================================================= */
+
+
+.home-label {
+
+  position:
+    absolute;
+
+  top:
+    48px;
+
+  left:
+    52px;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.22em;
+
+  color:
+    var(--muted);
+
+}
+
+
+.home-meta {
+
+  position:
+    absolute;
+
+  top:
+    48px;
+
+  right:
+    52px;
+
+  text-align:
+    right;
+
+  font-size:
+    7px;
+
+  line-height:
+    1.7;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    #4b4944;
+
+}
+
+
+.home-meta .meta-gap {
+
+  margin-top:
+    13px;
+
+}
+
+
+/* =========================================================
+   HOME / CENTER
+   ========================================================= */
+
+
+.home-center {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    47%;
+
+  width:
+    min(680px, calc(100vw - 100px));
+
+  transform:
+    translate(-50%, -50%);
+
+  text-align:
+    center;
+
+}
+
+
+.home-index {
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    0.28em;
+
+  color:
+    #55534e;
+
+}
+
+
+.home-line {
+
+  width:
+    24px;
+
+  height:
+    1px;
+
+  margin:
+    28px auto 31px;
+
+  background:
+    var(--faint);
+
+}
+
+
+.home-center h1 {
+
+  margin:
+    0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(34px, 4.5vw, 67px);
+
+  font-weight:
+    normal;
+
+  line-height:
+    1.17;
+
+  letter-spacing:
+    -0.015em;
+
+  color:
+    var(--text);
+
+}
+
+
+.enter-button {
+
+  margin-top:
+    56px;
+
+  padding:
+    10px 0;
+
+  border:
+    none;
+
+  background:
+    none;
+
+  color:
+    #55534e;
+
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.21em;
+
+  cursor:
+    pointer;
+
+  transition:
+    color 0.45s ease,
+    transform 0.45s ease;
+
+}
+
+
+.enter-button span {
+
+  display:
+    inline-block;
+
+  margin-left:
+    10px;
+
+  transition:
+    transform 0.45s ease;
+
+}
+
+
+.enter-button:hover {
+
+  color:
+    var(--text);
+
+}
+
+
+.enter-button:hover span {
+
+  transform:
+    translateX(5px);
+
+}
+
+
+/* =========================================================
+   HOME / BOTTOM
+   ========================================================= */
+
+
+.system-status {
+
+  position:
+    absolute;
+
+  left:
+    52px;
+
+  bottom:
+    43px;
+
+  display:
+    flex;
+
+  gap:
+    18px;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    #46443f;
+
+}
+
+
+.jst-clock {
+
+  position:
+    absolute;
+
+  right:
+    52px;
+
+  bottom:
+    43px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.15em;
+
+  color:
+    #46443f;
+
+}
+
+
+/* =========================================================
+   RED DOT
+
+   Important:
+   Visual appearance NEVER changes after unlock.
+   ========================================================= */
+
+
+.red-dot {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  bottom:
+    27px;
+
+  z-index:
+    20;
+
+  width:
+    5px;
+
+  height:
+    5px;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--accent);
+
+  opacity:
+    0.52;
+
+  transform:
+    translateX(-50%);
+
+  pointer-events:
+    none;
+
+  cursor:
+    default;
+
+  outline:
+    none;
+
+}
+
+
+/*
+   After Archive 07:
+
+   visually identical.
+
+   Only interaction changes.
+*/
+
+
+.red-dot.active {
+
+  pointer-events:
+    auto;
+
+  cursor:
+    default;
+
+}
+
+
+/*
+   Deliberately NO hover effect.
+*/
+
+
+.red-dot.active:hover {
+
+  opacity:
+    0.52;
+
+  background:
+    var(--accent);
+
+}
+
+
+/* =========================================================
+   ARCHIVE INDEX
+   ========================================================= */
+
+
+.archive-index-screen {
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  width:
+    100vw;
+
+  height:
+    100vh;
+
+  min-height:
+    620px;
+
+  background:
+    var(--bg);
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+  transition:
+    opacity 0.9s ease,
+    visibility 0.9s ease;
+
+}
+
+
+.archive-index-screen.visible {
+
+  opacity:
+    1;
+
+  visibility:
+    visible;
+
+  pointer-events:
+    auto;
+
+}
+
+
+/* =========================================================
+   INDEX / TOP
+   ========================================================= */
+
+
+.index-return {
+
+  position:
+    absolute;
+
+}
+
+
+.index-meta {
+
+  position:
+    absolute;
+
+  top:
+    48px;
+
+  right:
+    52px;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    var(--faint);
+
+}
+
+
+/* =========================================================
+   INDEX / HEADING
+   ========================================================= */
+
+
+.index-heading {
+
+  position:
+    absolute;
+
+  left:
+    11%;
+
+  top:
+    17%;
+
+}
+
+
+.index-small {
+
+  margin-bottom:
+    13px;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.22em;
+
+  color:
+    #4a4843;
+
+}
+
+
+.index-heading h2 {
+
+  margin:
+    0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(31px, 3.4vw, 50px);
+
+  font-weight:
+    normal;
+
+  letter-spacing:
+    0.06em;
+
+  color:
+    var(--text);
+
+}
+
+
+.index-heading-line {
+
+  width:
+    22px;
+
+  height:
+    1px;
+
+  margin-top:
+    22px;
+
+  background:
+    var(--faint);
+
+}
+
+
+/* =========================================================
+   ARCHIVE LIST
+   ========================================================= */
+
+
+.archive-list {
+
+  position:
+    absolute;
+
+  left:
+    37%;
+
+  top:
+    18%;
+
+  width:
+    min(510px, 52vw);
+
+}
+
+
+.archive-entry {
+
+  position:
+    relative;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    52px 1fr 110px;
+
+  align-items:
+    center;
+
+  min-height:
+    61px;
+
+  border-bottom:
+    1px solid #23221f;
+
+  color:
+    #403f3a;
+
+  transition:
+    color 0.4s ease,
+    padding-left 0.4s ease;
+
+}
+
+
+.archive-entry:first-child {
+
+  border-top:
+    1px solid #23221f;
+
+}
+
+
+.archive-number-list {
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.17em;
+
+  color:
+    inherit;
+
+}
+
+
+.archive-name {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    15px;
+
+  letter-spacing:
+    0.04em;
+
+  color:
+    inherit;
+
+}
+
+
+.archive-state-label {
+
+  text-align:
+    right;
+
+  font-size:
+    6px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    inherit;
+
+}
+
+
+/* AVAILABLE */
+
+.archive-entry.available {
+
+  color:
+    #88857d;
+
+  cursor:
+    pointer;
+
+}
+
+
+.archive-entry.available:hover {
+
+  padding-left:
+    6px;
+
+  color:
+    var(--text);
+
+}
+
+
+/* COMPLETE */
+
+.archive-entry.complete {
+
+  color:
+    #69665f;
+
+  cursor:
+    pointer;
+
+}
+
+
+.archive-entry.complete:hover {
+
+  padding-left:
+    6px;
+
+  color:
+    #aaa69c;
+
+}
+
+
+/* LOCKED */
+
+.archive-entry.locked {
+
+  color:
+    #32312d;
+
+  cursor:
+    default;
+
+}
+
+
+/* =========================================================
+   AVAILABLE COUNT
+   ========================================================= */
+
+
+.availability {
+
+  position:
+    absolute;
+
+  right:
+    11%;
+
+  bottom:
+    45px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    #45433e;
+
+}
+
+
+/* =========================================================
+   PAGE FADE
+   ========================================================= */
+
+
+body.page-leaving {
+
+  opacity:
+    0;
+
+  transition:
+    opacity 0.7s ease;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+
+@media
+(max-width: 800px) {
+
+
+  body {
+
+    overflow:
+      auto;
+
+  }
+
+
+  .home-label {
+
+    left:
+      25px;
+
+    top:
+      30px;
+
+  }
+
+
+  .home-meta {
+
+    right:
+      25px;
+
+    top:
+      30px;
+
+  }
+
+
+  .home-center {
+
+    width:
+      calc(100vw - 50px);
+
+  }
+
+
+  .home-center h1 {
+
+    font-size:
+      clamp(34px, 10vw, 54px);
+
+  }
+
+
+  .system-status {
+
+    left:
+      25px;
+
+    bottom:
+      32px;
+
+  }
+
+
+  .jst-clock {
+
+    right:
+      25px;
+
+    bottom:
+      32px;
+
+  }
+
+
+  .red-dot {
+
+    bottom:
+      18px;
+
+  }
+
+
+  .return-button {
+
+    left:
+      25px;
+
+    top:
+      30px;
+
+  }
+
+
+  .index-meta {
+
+    right:
+      25px;
+
+    top:
+      34px;
+
+  }
+
+
+  .index-heading {
+
+    left:
+      25px;
+
+    top:
+      120px;
+
+  }
+
+
+  .archive-list {
+
+    left:
+      25px;
+
+    top:
+      290px;
+
+    width:
+      calc(100vw - 50px);
+
+  }
+
+
+  .archive-entry {
+
+    grid-template-columns:
+      45px 1fr 85px;
+
+  }
+
+
+  .availability {
+
+    position:
+      fixed;
+
+    right:
+      25px;
+
+    bottom:
+      28px;
+
+  }
+
+
+}

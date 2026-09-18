@@ -1,0 +1,1777 @@
+/* =========================================================
+   SOURCE 08
+
+   This page is deliberately not an archive.
+   ========================================================= */
+
+
+.source-body {
+
+  overflow:
+    hidden;
+
+  background:
+    var(--bg);
+
+}
+
+
+/* =========================================================
+   SCREEN
+   ========================================================= */
+
+
+.source-screen {
+
+  position:
+    relative;
+
+  width:
+    100vw;
+
+  height:
+    100vh;
+
+  min-height:
+    650px;
+
+  overflow:
+    hidden;
+
+  background:
+    var(--bg);
+
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+
+.source-label {
+
+  position:
+    absolute;
+
+  top:
+    48px;
+
+  left:
+    52px;
+
+  z-index:
+    20;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    #494741;
+
+  opacity:
+    0;
+
+  animation:
+    sourceLabelIn 1.4s ease 0.8s forwards;
+
+}
+
+
+@keyframes sourceLabelIn {
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   GENERIC STAGE
+   ========================================================= */
+
+
+.stage {
+
+  position:
+    absolute;
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease,
+    transform 1.2s ease;
+
+}
+
+
+.stage.active {
+
+  opacity:
+    1;
+
+  visibility:
+    visible;
+
+  pointer-events:
+    auto;
+
+}
+
+
+/* =========================================================
+   STAGE 01
+   ========================================================= */
+
+
+.stage-one {
+
+  top:
+    50%;
+
+  left:
+    50%;
+
+  width:
+    min(720px, calc(100vw - 120px));
+
+  transform:
+    translate(-50%, -47%);
+
+}
+
+
+.stage-one.active {
+
+  transform:
+    translate(-50%, -50%);
+
+}
+
+
+.record-table {
+
+  width:
+    100%;
+
+}
+
+
+.source-record {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    70px 1fr 120px;
+
+  align-items:
+    center;
+
+  width:
+    100%;
+
+  height:
+    54px;
+
+  margin:
+    0;
+
+  padding:
+    0 4px;
+
+  border:
+    none;
+
+  border-bottom:
+    1px solid #24231f;
+
+  background:
+    transparent;
+
+  color:
+    #6d6a63;
+
+  font:
+    inherit;
+
+  text-align:
+    left;
+
+  appearance:
+    none;
+
+  cursor:
+    default;
+
+  transition:
+    color 0.35s ease,
+    background 0.35s ease;
+
+}
+
+
+.source-record:first-child {
+
+  border-top:
+    1px solid #24231f;
+
+}
+
+
+.source-record:hover {
+
+  color:
+    #918e85;
+
+  background:
+    rgba(255,255,255,0.008);
+
+}
+
+
+.record-number {
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.18em;
+
+}
+
+
+.record-value {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    13px;
+
+  font-weight:
+    normal;
+
+  letter-spacing:
+    0.04em;
+
+}
+
+
+.record-status {
+
+  text-align:
+    right;
+
+  font-size:
+    6px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    #46443f;
+
+}
+
+
+/* =========================================================
+   MISSING POSITION
+   ========================================================= */
+
+
+.missing-position {
+
+  position:
+    relative;
+
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    38px;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  background:
+    transparent;
+
+  appearance:
+    none;
+
+  cursor:
+    default;
+
+}
+
+
+.missing-line {
+
+  position:
+    absolute;
+
+  top:
+    50%;
+
+  left:
+    0;
+
+  width:
+    100%;
+
+  height:
+    1px;
+
+  background:
+    #1d1c1a;
+
+  opacity:
+    0.65;
+
+  transition:
+    background 0.5s ease,
+    opacity 0.5s ease;
+
+}
+
+
+.missing-position:hover
+.missing-line {
+
+  background:
+    #3d3b36;
+
+  opacity:
+    1;
+
+}
+
+
+/* =========================================================
+   STAGE 01 META
+   ========================================================= */
+
+
+.stage-one-meta {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  margin-top:
+    18px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.16em;
+
+  color:
+    #44423d;
+
+}
+
+
+.system-line {
+
+  margin-top:
+    46px;
+
+  text-align:
+    center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    12px;
+
+  letter-spacing:
+    0.03em;
+
+  color:
+    #56534d;
+
+  transition:
+    color 0.5s ease;
+
+}
+
+
+/* =========================================================
+   STAGE 02
+   ========================================================= */
+
+
+.stage-two {
+
+  top:
+    50%;
+
+  left:
+    50%;
+
+  width:
+    min(680px, calc(100vw - 120px));
+
+  transform:
+    translate(-50%, -47%);
+
+}
+
+
+.stage-two.active {
+
+  transform:
+    translate(-50%, -50%);
+
+}
+
+
+.position-eight {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    70px 1fr 130px;
+
+  align-items:
+    center;
+
+  min-height:
+    62px;
+
+  margin-bottom:
+    48px;
+
+  padding:
+    0 5px;
+
+  border-top:
+    1px solid #292824;
+
+  border-bottom:
+    1px solid #292824;
+
+}
+
+
+.position-number {
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    var(--text);
+
+}
+
+
+.position-state {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    14px;
+
+  color:
+    #716e66;
+
+}
+
+
+.position-status {
+
+  text-align:
+    right;
+
+  font-size:
+    6px;
+
+  letter-spacing:
+    0.17em;
+
+  color:
+    #514f49;
+
+}
+
+
+/* =========================================================
+   INSTRUCTION RECORDS
+   ========================================================= */
+
+
+.instruction-records {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap:
+    8px;
+
+}
+
+
+.instruction-item {
+
+  position:
+    relative;
+
+  min-width:
+    0;
+
+  height:
+    80px;
+
+  padding:
+    14px 8px;
+
+  border:
+    1px solid #252420;
+
+  background:
+    transparent;
+
+  color:
+    #57554f;
+
+  appearance:
+    none;
+
+  cursor:
+    pointer;
+
+  transition:
+    border-color 0.4s ease,
+    color 0.4s ease,
+    transform 1.6s ease;
+
+}
+
+
+.instruction-item span {
+
+  display:
+    block;
+
+  margin-bottom:
+    20px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    6px;
+
+  letter-spacing:
+    0.15em;
+
+  color:
+    #3f3d39;
+
+}
+
+
+.instruction-item strong {
+
+  display:
+    block;
+
+  overflow:
+    hidden;
+
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size:
+    7px;
+
+  font-weight:
+    normal;
+
+  letter-spacing:
+    0.1em;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+}
+
+
+.instruction-item:hover {
+
+  border-color:
+    #484640;
+
+  color:
+    #aaa69c;
+
+}
+
+
+.instruction-item.index-recovered {
+
+  border-color:
+    #57534c;
+
+  color:
+    var(--text);
+
+}
+
+
+.index-result {
+
+  min-height:
+    18px;
+
+  margin-top:
+    38px;
+
+  text-align:
+    center;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    #615e57;
+
+}
+
+
+/* =========================================================
+   DRIFT
+   ========================================================= */
+
+
+.instruction-records.drifting
+.instruction-item:nth-child(1) {
+
+  transform:
+    translate(7px, -3px);
+
+}
+
+
+.instruction-records.drifting
+.instruction-item:nth-child(2) {
+
+  transform:
+    translate(-5px, 5px);
+
+}
+
+
+.instruction-records.drifting
+.instruction-item:nth-child(3) {
+
+  transform:
+    translate(4px, 7px);
+
+}
+
+
+.instruction-records.drifting
+.instruction-item:nth-child(4) {
+
+  transform:
+    translate(-7px, -5px);
+
+}
+
+
+.instruction-records.drifting
+.instruction-item:nth-child(5) {
+
+  transform:
+    translate(6px, 3px);
+
+}
+
+
+.instruction-records.drifting
+.instruction-item:nth-child(7) {
+
+  transform:
+    translate(-4px, 6px);
+
+}
+
+
+/*
+   FIXED never moves.
+*/
+
+
+.instruction-records.drifting
+.fixed-item {
+
+  transform:
+    translate(0, 0);
+
+}
+
+
+/* =========================================================
+   LEFT EDGE
+   ========================================================= */
+
+
+.left-edge {
+
+  position:
+    fixed;
+
+  top:
+    0;
+
+  left:
+    0;
+
+  z-index:
+    50;
+
+  width:
+    26px;
+
+  height:
+    100vh;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  background:
+    transparent;
+
+  appearance:
+    none;
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+  cursor:
+    default;
+
+  transition:
+    opacity 0.7s ease;
+
+}
+
+
+.left-edge.available {
+
+  visibility:
+    visible;
+
+  pointer-events:
+    auto;
+
+}
+
+
+.left-edge.available:hover {
+
+  opacity:
+    1;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(111, 41, 45, 0.08),
+      transparent
+    );
+
+}
+
+
+/* =========================================================
+   STAGE 03
+   ========================================================= */
+
+
+.stage-three {
+
+  top:
+    50%;
+
+  left:
+    -380px;
+
+  width:
+    350px;
+
+  transform:
+    translateY(-50%);
+
+}
+
+
+.stage-three.revealed {
+
+  left:
+    11%;
+
+}
+
+
+.stage-three.active {
+
+  opacity:
+    1;
+
+  visibility:
+    visible;
+
+  pointer-events:
+    auto;
+
+}
+
+
+.raw-heading {
+
+  margin-bottom:
+    46px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    19px;
+
+  letter-spacing:
+    0.08em;
+
+  color:
+    var(--text);
+
+}
+
+
+.raw-metadata {
+
+  border-top:
+    1px solid #292824;
+
+}
+
+
+.metadata-row {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  min-height:
+    43px;
+
+  align-items:
+    center;
+
+  border-bottom:
+    1px solid #24231f;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.16em;
+
+}
+
+
+.metadata-row span {
+
+  color:
+    #4b4944;
+
+}
+
+
+.metadata-row strong {
+
+  text-align:
+    right;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    8px;
+
+  font-weight:
+    normal;
+
+  color:
+    #747169;
+
+}
+
+
+.recover-button {
+
+  margin-top:
+    38px;
+
+  padding:
+    8px 0;
+
+  border:
+    none;
+
+  background:
+    transparent;
+
+  color:
+    #56534d;
+
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.18em;
+
+  appearance:
+    none;
+
+  cursor:
+    pointer;
+
+  transition:
+    color 0.4s ease;
+
+}
+
+
+.recover-button:hover {
+
+  color:
+    var(--text);
+
+}
+
+
+.recover-message {
+
+  min-height:
+    18px;
+
+  margin-top:
+    22px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.15em;
+
+  color:
+    #5e5b54;
+
+}
+
+
+/* =========================================================
+   SOURCE RED DOT
+   ========================================================= */
+
+
+.source-red-dot {
+
+  position:
+    fixed;
+
+  left:
+    50%;
+
+  bottom:
+    27px;
+
+  z-index:
+    70;
+
+  width:
+    5px;
+
+  height:
+    5px;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--accent);
+
+  opacity:
+    0.52;
+
+  transform:
+    translateX(-50%);
+
+  appearance:
+    none;
+
+  cursor:
+    default;
+
+  transition:
+    opacity 0.5s ease;
+
+}
+
+
+.source-red-dot.reference-ready {
+
+  pointer-events:
+    auto;
+
+}
+
+
+.source-red-dot.reference-ready:hover {
+
+  opacity:
+    0.8;
+
+}
+
+
+/* =========================================================
+   STAGE 04
+   ========================================================= */
+
+
+.stage-four {
+
+  top:
+    50%;
+
+  left:
+    50%;
+
+  width:
+    min(620px, calc(100vw - 100px));
+
+  max-height:
+    78vh;
+
+  overflow-y:
+    auto;
+
+  transform:
+    translate(-50%, -47%);
+
+  scrollbar-width:
+    none;
+
+}
+
+
+.stage-four::-webkit-scrollbar {
+
+  display:
+    none;
+
+}
+
+
+.stage-four.active {
+
+  transform:
+    translate(-50%, -50%);
+
+}
+
+
+.fragment-list {
+
+  padding:
+    15px 0;
+
+}
+
+
+.raw-fragment {
+
+  padding:
+    24px 0 28px;
+
+  border-bottom:
+    1px solid #24231f;
+
+}
+
+
+.raw-fragment:first-child {
+
+  border-top:
+    1px solid #24231f;
+
+}
+
+
+.archived-version {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.8;
+
+  color:
+    #5d5a54;
+
+}
+
+
+.source-version {
+
+  margin-top:
+    11px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.8;
+
+  color:
+    #aaa69c;
+
+  opacity:
+    0;
+
+  transform:
+    translateY(5px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+
+}
+
+
+.raw-fragment.recovered
+.source-version {
+
+  opacity:
+    1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+.deleted-version {
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.12em;
+
+  color:
+    #5e5b55;
+
+}
+
+
+/* =========================================================
+   TERMINAL
+   ========================================================= */
+
+
+.terminal {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  margin-top:
+    54px;
+
+  padding-bottom:
+    8px;
+
+  opacity:
+    0;
+
+  pointer-events:
+    none;
+
+  transition:
+    opacity 1s ease;
+
+}
+
+
+.terminal.visible {
+
+  opacity:
+    1;
+
+  pointer-events:
+    auto;
+
+}
+
+
+.terminal-prefix {
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    10px;
+
+  color:
+    #77736b;
+
+}
+
+
+.terminal input {
+
+  flex:
+    1;
+
+  padding:
+    4px 0;
+
+  border:
+    none;
+
+  border-bottom:
+    1px solid #35332f;
+
+  outline:
+    none;
+
+  background:
+    transparent;
+
+  color:
+    var(--text);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    14px;
+
+  caret-color:
+    #8a867d;
+
+}
+
+
+.terminal-history {
+
+  min-height:
+    40px;
+
+  margin-top:
+    18px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  line-height:
+    1.8;
+
+  letter-spacing:
+    0.08em;
+
+  color:
+    #494741;
+
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+
+.final-state {
+
+  position:
+    fixed;
+
+  top:
+    50%;
+
+  left:
+    50%;
+
+  z-index:
+    100;
+
+  width:
+    min(600px, calc(100vw - 80px));
+
+  transform:
+    translate(-50%, -50%);
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+}
+
+
+.final-state.visible {
+
+  opacity:
+    1;
+
+  visibility:
+    visible;
+
+  transition:
+    opacity 1.8s ease;
+
+}
+
+
+.final-input {
+
+  margin-bottom:
+    46px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    14px;
+
+  color:
+    #77736b;
+
+}
+
+
+.final-input::before {
+
+  content:
+    "> ";
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  color:
+    #55524c;
+
+}
+
+
+.final-answer {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    18px;
+
+  color:
+    var(--text);
+
+  opacity:
+    0;
+
+}
+
+
+.final-state.answer-visible
+.final-answer {
+
+  animation:
+    finalAnswer 1.8s ease forwards;
+
+}
+
+
+@keyframes finalAnswer {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+
+@media
+(max-width: 760px) {
+
+
+  .source-label {
+
+    top:
+      30px;
+
+    left:
+      25px;
+
+  }
+
+
+  .stage-one,
+  .stage-two {
+
+    width:
+      calc(100vw - 50px);
+
+  }
+
+
+  .source-record {
+
+    grid-template-columns:
+      45px 1fr 82px;
+
+  }
+
+
+  .instruction-records {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+
+  .instruction-item:last-child {
+
+    grid-column:
+      span 2;
+
+  }
+
+
+  .stage-three.revealed {
+
+    left:
+      25px;
+
+  }
+
+
+  .stage-three {
+
+    width:
+      calc(100vw - 50px);
+
+  }
+
+
+  .stage-four {
+
+    width:
+      calc(100vw - 50px);
+
+  }
+
+
+}
+/* =========================================================
+   STAGE 02 / AFTER FIXED
+   ========================================================= */
+
+.instruction-records.fixed-resolved
+.instruction-item:not(
+  [data-instruction="left"]
+) {
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.instruction-records.fixed-resolved
+[data-instruction="left"] {
+  opacity: 1;
+  color: #8d8980;
+  border-color: #373530;
+}
+
+
+/* LEFT itself has been selected */
+
+.instruction-records.left-selected
+[data-instruction="left"] {
+  color: var(--text);
+  border-color: #57534c;
+}
+
+
+/* =========================================================
+   LEFT EDGE HINT
+   ========================================================= */
+
+.left-edge.available {
+  visibility: visible;
+  pointer-events: auto;
+
+  opacity: 1;
+
+  width: 34px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(111, 41, 45, 0.10),
+      rgba(111, 41, 45, 0.025) 1px,
+      transparent 7px
+    );
+
+  transition:
+    background 0.7s ease,
+    opacity 0.7s ease;
+}
+
+
+.left-edge.available:hover {
+  background:
+    linear-gradient(
+      to right,
+      rgba(111, 41, 45, 0.22),
+      rgba(111, 41, 45, 0.05) 2px,
+      transparent 10px
+    );
+}
+
+
+/* =========================================================
+   THE END
+   ========================================================= */
+
+.the-end {
+
+  position:
+    fixed;
+
+  top:
+    50%;
+
+  left:
+    50%;
+
+  z-index:
+    120;
+
+  transform:
+    translate(-50%, -50%);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    15px;
+
+  font-weight:
+    normal;
+
+  letter-spacing:
+    0.08em;
+
+  color:
+    var(--text);
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+}
+
+
+.the-end.visible {
+
+  visibility:
+    visible;
+
+  animation:
+    theEndIn 2.8s ease forwards;
+
+}
+
+
+@keyframes theEndIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.78;
+  }
+
+}
+
+
+.final-state.ending {
+
+  opacity:
+    0;
+
+  transition:
+    opacity 2.4s ease;
+
+}

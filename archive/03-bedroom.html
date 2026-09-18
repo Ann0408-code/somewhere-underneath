@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>03 / 臥室</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/bedroom.css"
+  >
+
+</head>
+
+
+<body>
+
+  <!--
+
+      room inventory
+
+      occupant_01: absent
+      visitor_01: unknown
+
+      photograph_08:
+      do not index
+
+  -->
+
+
+  <main class="screen bedroom-screen">
+
+
+    <a
+      class="return-button"
+      href="../index.html#archive"
+    >
+      <span class="return-arrow">←</span>
+      RETURN
+    </a>
+
+
+    <div class="bedroom-meta">
+      ROOM CONDITION&nbsp;&nbsp;&nbsp;04.08 / 03:17
+    </div>
+
+
+
+    <!-- TITLE -->
+
+    <section class="bedroom-heading">
+
+      <div class="archive-number">
+        ARCHIVE 03
+      </div>
+
+      <h1>
+        臥室
+      </h1>
+
+      <div class="heading-line"></div>
+
+    </section>
+
+
+
+    <!-- ROOM -->
+
+    <section
+      class="room"
+      id="room"
+    >
+
+
+      <!-- WALLS -->
+
+      <div class="room-wall wall-top"></div>
+      <div class="room-wall wall-left"></div>
+      <div class="room-wall wall-right"></div>
+      <div class="room-wall wall-bottom-left"></div>
+      <div class="room-wall wall-bottom-right"></div>
+
+
+
+      <!-- BED -->
+
+      <button
+        class="room-object bed"
+        data-object="bed"
+        aria-label="床"
+      >
+
+        <span class="bed-frame"></span>
+
+        <span
+          class="blanket"
+          id="blanket"
+        ></span>
+
+        <span class="pillow"></span>
+
+      </button>
+
+
+
+      <!-- HIDDEN PHOTO UNDER BLANKET -->
+
+      <button
+        class="hidden-photo"
+        id="hiddenPhoto"
+        aria-label="照片"
+      >
+
+        <span>
+          03:12
+        </span>
+
+      </button>
+
+
+
+      <!-- DRAWER / CABINET -->
+
+      <button
+        class="room-object drawer"
+        data-object="drawer"
+        aria-label="抽屜"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+
+      <!-- NOTE ON CABINET -->
+
+      <button
+        class="floor-note"
+        id="floorNote"
+        aria-label="紙張"
+      ></button>
+
+
+
+      <!-- DESK -->
+
+      <button
+        class="room-object desk"
+        data-object="desk"
+        aria-label="書桌"
+      >
+
+        <span class="desk-surface"></span>
+
+        <span class="desk-leg leg-left"></span>
+        <span class="desk-leg leg-right"></span>
+
+      </button>
+
+
+
+      <!-- CLOCK -->
+
+      <div class="room-clock">
+        03:17
+      </div>
+
+
+
+      <!-- WASTE BIN UNDER DESK -->
+
+      <button
+        class="room-object waste-bin"
+        data-object="waste"
+        aria-label="垃圾桶"
+      ></button>
+
+
+
+      <!-- DOOR -->
+
+      <button
+        class="room-object door"
+        data-object="door"
+        aria-label="門"
+      >
+
+        <span class="door-handle"></span>
+
+      </button>
+
+
+    </section>
+
+
+
+    <!-- INSPECTOR -->
+
+    <aside class="bedroom-inspector">
+
+      <div class="inspector-label">
+        ROOM RECORD
+      </div>
+
+
+      <div
+        class="bedroom-inspector-content"
+        id="bedroomInspector"
+      >
+
+        <div class="empty-inspection">
+          點擊房間內的物件。
+        </div>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- TIMELINE -->
+
+    <section class="room-timeline">
+
+      <div class="timeline-title">
+        ACTIVITY RECORD
+      </div>
+
+
+      <div class="timeline-values">
+
+        <span>03:11</span>
+
+        <span
+          class="missing-time"
+          id="missingTime"
+        >
+          --:--
+        </span>
+
+        <span>03:13</span>
+        <span>03:14</span>
+        <span>03:15</span>
+        <span>03:16</span>
+        <span>03:17</span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- STATUS -->
+
+    <div class="room-status">
+
+      <span>
+        ROOM STATUS
+      </span>
+
+      <span id="roomStatus">
+        COMPLETE
+      </span>
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       NOTE
+       ===================================================== -->
+
+  <div
+    class="note-overlay"
+    id="noteOverlay"
+  >
+
+    <div class="note-paper">
+
+      <button
+        class="overlay-close"
+        id="noteClose"
+      >
+        ×
+      </button>
+
+
+      <div class="note-time">
+        03:15
+      </div>
+
+
+      <div class="note-text">
+        我什麼都沒有留下。
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       PHOTO
+       ===================================================== -->
+
+  <div
+    class="photo-overlay"
+    id="photoOverlay"
+  >
+
+    <div class="photo-back">
+
+
+      <div class="photo-time">
+        03:12
+      </div>
+
+
+      <div class="photo-message">
+        你不該找到這個。
+      </div>
+
+
+      <div class="photo-actions">
+
+        <button id="keepPhoto">
+          留下
+        </button>
+
+        <button id="removePhoto">
+          移除
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       GOOD MESSAGE
+       ===================================================== -->
+
+  <div
+    class="bedroom-message-overlay"
+    id="bedroomMessageOverlay"
+  >
+
+    <div
+      class="bedroom-message"
+      id="bedroomMessage"
+    ></div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       COMPLETION
+       ===================================================== -->
+
+  <div
+    class="bedroom-completion"
+    id="bedroomCompletion"
+  >
+
+    <div class="bedroom-completion-content">
+
+
+      <div
+        id="bedroomCompleteTop"
+      ></div>
+
+
+      <div
+        class="bedroom-complete-main"
+        id="bedroomCompleteMain"
+      ></div>
+
+
+      <div
+        class="bedroom-complete-second"
+        id="bedroomCompleteSecond"
+      ></div>
+
+
+      <div
+        class="bedroom-complete-access"
+        id="bedroomCompleteAccess"
+      ></div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <script src="../js/bedroom.js"></script>
+
+</body>
+
+</html>
