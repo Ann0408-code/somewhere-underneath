@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>02 / PLATFORM</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/platform.css"
+  >
+</head>
+
+
+<body>
+
+  <!--
+
+      passenger_01: departed
+      passenger_02: departed
+      passenger_03: departed
+      passenger_04: departed
+      passenger_05: departed
+      passenger_06: departed
+      passenger_07: departed
+
+      passenger_08: no departure record
+
+  -->
+
+
+  <main class="screen platform-screen">
+
+
+    <a
+      class="return-button"
+      href="../index.html#archive"
+    >
+      <span class="return-arrow">←</span>
+      RETURN
+    </a>
+
+
+    <div class="platform-meta">
+      CAMERA 02
+    </div>
+
+
+
+    <section class="platform-heading">
+
+      <div class="archive-number">
+        ARCHIVE 02
+      </div>
+
+      <h1>
+        PLATFORM
+      </h1>
+
+      <div class="heading-line"></div>
+
+    </section>
+
+
+
+    <!-- CAMERA VIEW -->
+
+    <section class="camera-view">
+
+      <div class="camera-noise"></div>
+
+
+      <div
+        class="camera-label"
+        id="cameraLabel"
+      >
+        CAMERA 02
+      </div>
+
+
+      <div
+        class="platform-clock"
+        id="platformClock"
+      >
+        23:41:26
+      </div>
+
+
+      <div
+        class="passenger-count"
+        id="passengerCount"
+      >
+        PASSENGER COUNT&nbsp;&nbsp;01
+      </div>
+
+
+
+      <!-- ABSTRACT PLATFORM -->
+
+      <div class="platform-visual">
+
+
+        <div class="ceiling-line"></div>
+
+
+        <div class="pillar pillar-one"></div>
+
+        <div class="pillar pillar-two"></div>
+
+        <div class="pillar pillar-three"></div>
+
+
+        <div class="platform-sign">
+          PLATFORM&nbsp;&nbsp;2
+        </div>
+
+
+        <div class="bench">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+
+        <div class="figure">
+
+          <div class="figure-head"></div>
+          <div class="figure-body"></div>
+
+        </div>
+
+
+        <div class="platform-edge"></div>
+
+        <div class="track-line"></div>
+
+
+        <div
+          class="train"
+          id="train"
+        ></div>
+
+
+        <div
+          class="signal-letter"
+          id="signalLetter"
+        ></div>
+
+
+      </div>
+
+
+      <div class="camera-footer">
+
+        <span>
+          FEED / LIVE
+        </span>
+
+        <span id="frameStatus">
+          FRAME STABLE
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ARRIVAL LOG -->
+
+    <section class="arrival-panel">
+
+      <div class="arrival-title">
+        ARRIVAL LOG
+      </div>
+
+
+      <div class="arrival-list">
+
+        <div>
+          <span>23:12</span>
+          <span>LOCAL</span>
+          <span>4 CARS</span>
+        </div>
+
+        <div>
+          <span>23:19</span>
+          <span>RAPID</span>
+          <span>8 CARS</span>
+        </div>
+
+        <div>
+          <span>23:27</span>
+          <span>LOCAL</span>
+          <span>4 CARS</span>
+        </div>
+
+        <div>
+          <span>23:34</span>
+          <span>RAPID</span>
+          <span>8 CARS</span>
+        </div>
+
+        <div>
+          <span>23:42</span>
+          <span>LOCAL</span>
+          <span>4 CARS</span>
+        </div>
+
+        <div>
+          <span>23:49</span>
+          <span>RAPID</span>
+          <span>8 CARS</span>
+        </div>
+
+        <div>
+          <span>23:57</span>
+          <span>LOCAL</span>
+          <span>4 CARS</span>
+        </div>
+
+        <div>
+          <span>00:04</span>
+          <span>RAPID</span>
+          <span>8 CARS</span>
+        </div>
+
+      </div>
+
+
+      <div class="log-status">
+        8 ENTRIES / VERIFIED
+      </div>
+
+    </section>
+
+
+
+    <!-- OBSERVED LETTERS -->
+
+    <div class="observed">
+
+      <div>
+        SIGNAL RECOVERY
+      </div>
+
+      <div
+        class="observed-slots"
+        id="observedSlots"
+      >
+        _ &nbsp; _ &nbsp; _ &nbsp; _
+      </div>
+
+    </div>
+
+
+
+    <!-- REPORT -->
+
+    <button
+      class="platform-report"
+      id="platformReport"
+    >
+      RECOVER SIGNAL
+    </button>
+
+
+  </main>
+
+
+
+  <!-- ANSWER WINDOW -->
+
+  <div
+    class="signal-overlay"
+    id="signalOverlay"
+  >
+
+    <div class="signal-window">
+
+
+      <button
+        class="signal-close"
+        id="signalClose"
+      >
+        ×
+      </button>
+
+
+      <div class="signal-title">
+        SIGNAL RECOVERY
+      </div>
+
+
+      <label>
+        RECOVERED MESSAGE
+      </label>
+
+
+      <input
+        id="signalInput"
+        type="text"
+        maxlength="8"
+        autocomplete="off"
+      >
+
+
+      <button
+        class="signal-submit"
+        id="signalSubmit"
+      >
+        SUBMIT
+      </button>
+
+
+      <div
+        class="signal-response"
+        id="signalResponse"
+      ></div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- COMPLETION -->
+
+  <div
+    class="platform-completion"
+    id="platformCompletion"
+  >
+
+    <div class="platform-completion-content">
+
+      <div
+        id="platformCompleteTop"
+      ></div>
+
+      <div
+        class="platform-complete-main"
+        id="platformCompleteMain"
+      ></div>
+
+      <div
+        class="platform-complete-sub"
+        id="platformCompleteSub"
+      ></div>
+
+      <div
+        class="platform-complete-access"
+        id="platformCompleteAccess"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="../js/platform.js"></script>
+
+</body>
+
+</html>

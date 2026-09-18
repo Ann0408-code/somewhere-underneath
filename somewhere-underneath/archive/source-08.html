@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>source_08</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/source-08.css"
+  >
+
+</head>
+
+
+<body class="source-body">
+
+
+  <!-- =====================================================
+       SOURCE
+       ===================================================== -->
+
+  <main
+    class="source-screen"
+    id="sourceScreen"
+  >
+
+
+    <!-- SOURCE LABEL -->
+
+    <div
+      class="source-label"
+      id="sourceLabel"
+    >
+      source_08
+    </div>
+
+
+
+    <!-- ===================================================
+         STAGE 01
+         THE MISSING POSITION
+         =================================================== -->
+
+    <section
+      class="stage stage-one"
+      id="stageOne"
+    >
+
+
+      <div class="record-table">
+
+
+        <button
+          class="source-record"
+          data-record="01"
+        >
+
+          <span class="record-number">
+            01
+          </span>
+
+          <span class="record-value">
+            20:29
+          </span>
+
+          <span class="record-status">
+            VERIFIED
+          </span>
+
+        </button>
+
+
+        <button
+          class="source-record"
+          data-record="02"
+        >
+
+          <span class="record-number">
+            02
+          </span>
+
+          <span class="record-value">
+            LEFT
+          </span>
+
+          <span class="record-status">
+            VERIFIED
+          </span>
+
+        </button>
+
+
+        <button
+          class="source-record"
+          data-record="03"
+        >
+
+          <span class="record-number">
+            03
+          </span>
+
+          <span class="record-value">
+            03:12
+          </span>
+
+          <span class="record-status">
+            VERIFIED
+          </span>
+
+        </button>
+
+
+        <button
+          class="source-record special-date"
+          data-record="04"
+          id="dateRecord"
+        >
+
+          <span class="record-number">
+            04
+          </span>
+
+          <span
+            class="record-value"
+            id="dateValue"
+          >
+            04.08
+          </span>
+
+          <span
+            class="record-status"
+            id="dateStatus"
+          >
+            VERIFIED
+          </span>
+
+        </button>
+
+
+        <button
+          class="source-record"
+          data-record="05"
+        >
+
+          <span class="record-number">
+            05
+          </span>
+
+          <span class="record-value">
+            NULL
+          </span>
+
+          <span class="record-status">
+            VERIFIED
+          </span>
+
+        </button>
+
+
+        <button
+          class="source-record"
+          data-record="06"
+        >
+
+          <span class="record-number">
+            06
+          </span>
+
+          <span class="record-value">
+            ΔX 00 ΔY 00
+          </span>
+
+          <span class="record-status">
+            VERIFIED
+          </span>
+
+        </button>
+
+
+        <button
+          class="source-record"
+          data-record="07"
+        >
+
+          <span class="record-number">
+            07
+          </span>
+
+          <span class="record-value">
+            CLOSED
+          </span>
+
+          <span class="record-status">
+            VERIFIED
+          </span>
+
+        </button>
+
+
+        <!--
+             This is deliberately not visually
+             presented as a button.
+        -->
+
+        <button
+          class="missing-position"
+          id="missingPosition"
+          aria-label="unindexed position"
+        >
+          <span class="missing-line"></span>
+        </button>
+
+
+      </div>
+
+
+      <div class="stage-one-meta">
+
+        <div>
+          7 RECORDS
+        </div>
+
+        <div>
+          7 VERIFIED
+        </div>
+
+      </div>
+
+
+      <div
+        class="system-line"
+        id="systemLine"
+      >
+        Everything is where it should be.
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         STAGE 02
+         POSITION 08
+         =================================================== -->
+
+    <section
+      class="stage stage-two"
+      id="stageTwo"
+    >
+
+
+      <div class="position-eight">
+
+        <span class="position-number">
+          08
+        </span>
+
+        <span
+          class="position-state"
+          id="positionState"
+        >
+          —
+        </span>
+
+        <span
+          class="position-status"
+          id="positionStatus"
+        >
+          UNRESOLVED
+        </span>
+
+      </div>
+
+
+      <div
+        class="instruction-records"
+        id="instructionRecords"
+      >
+
+
+        <button
+          class="instruction-item"
+          data-instruction="date"
+          id="instructionDate"
+        >
+          <span>01</span>
+          <strong id="instructionDateValue">
+            04.08
+          </strong>
+        </button>
+
+
+        <button
+          class="instruction-item"
+          data-instruction="left"
+          id="instructionLeft"
+        >
+          <span>02</span>
+          <strong>
+            LEFT
+          </strong>
+        </button>
+
+
+        <button
+          class="instruction-item"
+          data-instruction="time"
+        >
+          <span>03</span>
+          <strong>
+            03:12
+          </strong>
+        </button>
+
+
+        <button
+          class="instruction-item"
+          data-instruction="watch"
+        >
+          <span>04</span>
+          <strong>
+            20:29
+          </strong>
+        </button>
+
+
+        <button
+          class="instruction-item"
+          data-instruction="null"
+        >
+          <span>05</span>
+          <strong>
+            NULL
+          </strong>
+        </button>
+
+
+        <button
+          class="instruction-item fixed-item"
+          data-instruction="fixed"
+          id="instructionFixed"
+        >
+          <span>06</span>
+          <strong>
+            FIXED
+          </strong>
+        </button>
+
+
+        <button
+          class="instruction-item"
+          data-instruction="closed"
+        >
+          <span>07</span>
+          <strong>
+            CLOSED
+          </strong>
+        </button>
+
+
+      </div>
+
+
+      <div
+        class="index-result"
+        id="indexResult"
+      >
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         LEFT EDGE
+         =================================================== -->
+
+    <button
+      class="left-edge"
+      id="leftEdge"
+      aria-label="left"
+    ></button>
+
+
+
+    <!-- ===================================================
+         STAGE 03
+         RAW SOURCE METADATA
+         =================================================== -->
+
+    <section
+      class="stage stage-three"
+      id="stageThree"
+    >
+
+
+      <div class="raw-heading">
+        SOURCE 08
+      </div>
+
+
+      <div class="raw-metadata">
+
+
+        <div class="metadata-row">
+
+          <span>
+            LANGUAGE
+          </span>
+
+          <strong>
+            NULL
+          </strong>
+
+        </div>
+
+
+        <div class="metadata-row">
+
+          <span>
+            POSITION
+          </span>
+
+          <strong>
+            08
+          </strong>
+
+        </div>
+
+
+        <div class="metadata-row">
+
+          <span>
+            MOVEMENT
+          </span>
+
+          <strong>
+            FIXED
+          </strong>
+
+        </div>
+
+
+        <div class="metadata-row">
+
+          <span>
+            INDEX
+          </span>
+
+          <strong>
+            04 / 08
+          </strong>
+
+        </div>
+
+
+        <div class="metadata-row content-row">
+
+          <span>
+            CONTENT
+          </span>
+
+          <strong id="contentStatus">
+            —
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+      <button
+        class="recover-button"
+        id="recoverContent"
+      >
+        RECOVER CONTENT
+      </button>
+
+
+      <div
+        class="recover-message"
+        id="recoverMessage"
+      >
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         FIXED REFERENCE
+         Same visual language as homepage dot.
+         =================================================== -->
+
+    <button
+      class="source-red-dot"
+      id="sourceRedDot"
+      aria-label=""
+    ></button>
+
+
+
+    <!-- ===================================================
+         STAGE 04
+         RECOVERED CONTENT
+         =================================================== -->
+
+    <section
+      class="stage stage-four"
+      id="stageFour"
+    >
+
+
+      <div class="fragment-list">
+
+
+        <article class="raw-fragment">
+
+          <div class="archived-version">
+            我什麼都沒有留下。
+          </div>
+
+          <div class="source-version">
+            我本來想留下一些東西。
+          </div>
+
+        </article>
+
+
+        <article class="raw-fragment">
+
+          <div class="archived-version">
+            Ich wollte, dass du mich findest.
+          </div>
+
+          <div class="source-version">
+            Ich hatte nur Angst, dass du es wirklich tust.
+          </div>
+
+        </article>
+
+
+        <article class="raw-fragment">
+
+          <div class="archived-version">
+            不知道你現在還看不看得到。
+          </div>
+
+          <div class="source-version">
+            我沒有真的想讓它消失。
+          </div>
+
+        </article>
+
+
+        <article class="raw-fragment final-fragment">
+
+          <div class="archived-version">
+            謝謝你找到我。
+          </div>
+
+          <div class="source-version deleted-version">
+            [deleted]
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+      <!-- FINAL TERMINAL -->
+
+      <div
+        class="terminal"
+        id="terminal"
+      >
+
+        <span class="terminal-prefix">
+          &gt;
+        </span>
+
+        <input
+          type="text"
+          id="terminalInput"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          aria-label="response"
+        >
+
+      </div>
+
+
+      <div
+        class="terminal-history"
+        id="terminalHistory"
+      >
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         FINAL
+         =================================================== -->
+
+    <section
+  class="final-state"
+  id="finalState"
+>
+
+  <div
+    class="final-input"
+    id="finalInput"
+  >
+  </div>
+
+  <div
+    class="final-answer"
+    id="finalAnswer"
+  >
+    好。
+  </div>
+
+</section>
+
+
+<section
+  class="the-end"
+  id="theEnd"
+>
+  The end.
+</section>
+
+
+  </main>
+
+
+  <script src="../js/source-08.js"></script>
+
+
+  <!--
+
+      你留住他了 謝謝你
+
+  -->
+
+
+</body>
+
+</html>
