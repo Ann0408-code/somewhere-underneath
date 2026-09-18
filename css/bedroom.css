@@ -1,0 +1,1944 @@
+/* =========================================================
+   ARCHIVE 03 / 臥室
+   ========================================================= */
+
+
+.bedroom-screen {
+
+  padding:
+    42px
+    52px;
+
+  background:
+    var(--bg);
+
+  overflow:
+    hidden;
+
+}
+
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+
+.bedroom-meta {
+
+  position:
+    absolute;
+
+  top:
+    48px;
+
+  right:
+    52px;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    var(--faint);
+
+}
+
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+
+.bedroom-heading {
+
+  position:
+    absolute;
+
+  left:
+    8%;
+
+  top:
+    15%;
+
+}
+
+
+.archive-number {
+
+  margin-bottom:
+    14px;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.22em;
+
+  color:
+    var(--muted);
+
+}
+
+
+.bedroom-heading h1 {
+
+  margin:
+    0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      34px,
+      4vw,
+      58px
+    );
+
+  font-weight:
+    normal;
+
+  letter-spacing:
+    0.05em;
+
+  color:
+    var(--text);
+
+}
+
+
+.heading-line {
+
+  width:
+    22px;
+
+  height:
+    1px;
+
+  margin-top:
+    23px;
+
+  background:
+    var(--faint);
+
+}
+
+
+
+/* =========================================================
+   ROOM
+   ========================================================= */
+
+
+.room {
+
+  position:
+    absolute;
+
+  left:
+    8%;
+
+  top:
+    37%;
+
+  width:
+    57%;
+
+  height:
+    40%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        255,
+        255,
+        255,
+        0.008
+      ),
+      transparent
+      55%
+    );
+
+}
+
+
+
+/* =========================================================
+   WALLS
+   ========================================================= */
+
+
+.room-wall {
+
+  position:
+    absolute;
+
+  background:
+    #393832;
+
+}
+
+
+.wall-top {
+
+  left:
+    0;
+
+  right:
+    0;
+
+  top:
+    0;
+
+  height:
+    1px;
+
+}
+
+
+.wall-left {
+
+  left:
+    0;
+
+  top:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    1px;
+
+}
+
+
+.wall-right {
+
+  right:
+    0;
+
+  top:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    1px;
+
+}
+
+
+.wall-bottom-left {
+
+  left:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    79%;
+
+  height:
+    1px;
+
+}
+
+
+.wall-bottom-right {
+
+  right:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    8%;
+
+  height:
+    1px;
+
+}
+
+
+
+/* =========================================================
+   GENERIC OBJECT
+   ========================================================= */
+
+
+.room-object {
+
+  position:
+    absolute;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  outline:
+    none;
+
+  background:
+    transparent;
+
+  cursor:
+    pointer;
+
+}
+
+
+
+/* =========================================================
+   BED
+   ========================================================= */
+
+
+.bed {
+
+  left:
+    8%;
+
+  top:
+    16%;
+
+  width:
+    30%;
+
+  height:
+    48%;
+
+  border:
+    1px solid
+    #45443e;
+
+  transition:
+    border-color
+    0.4s ease;
+
+}
+
+
+.bed:hover {
+
+  border-color:
+    #69665f;
+
+}
+
+
+.bed-frame {
+
+  position:
+    absolute;
+
+  inset:
+    5px;
+
+  border:
+    1px solid
+    #292824;
+
+}
+
+
+.blanket {
+
+  position:
+    absolute;
+
+  left:
+    5%;
+
+  right:
+    5%;
+
+  top:
+    37%;
+
+  bottom:
+    5%;
+
+  border-top:
+    1px solid
+    #55524c;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1b1b18,
+      #151512
+    );
+
+  transition:
+    transform
+      1.3s ease,
+    opacity
+      1s ease;
+
+}
+
+
+.blanket.moved {
+
+  transform:
+    translateX(-20px)
+    translateY(7px)
+    rotate(-3deg);
+
+  opacity:
+    0.55;
+
+}
+
+
+.pillow {
+
+  position:
+    absolute;
+
+  left:
+    14%;
+
+  top:
+    9%;
+
+  width:
+    42%;
+
+  height:
+    18%;
+
+  border:
+    1px solid
+    #3d3b36;
+
+  border-radius:
+    2px;
+
+}
+
+
+
+/* =========================================================
+   HIDDEN PHOTO
+   UNDER THE BLANKET
+   ========================================================= */
+
+
+.hidden-photo {
+
+  position:
+    absolute;
+
+  /*
+      Photo remains under
+      the blanket / bed area.
+  */
+
+  left:
+    23%;
+
+  top:
+    47%;
+
+  z-index:
+    8;
+
+  width:
+    42px;
+
+  height:
+    30px;
+
+  border:
+    1px solid
+    #55524c;
+
+  background:
+    #292824;
+
+  color:
+    #77736b;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    6px;
+
+  opacity:
+    0;
+
+  pointer-events:
+    none;
+
+  transform:
+    rotate(-4deg);
+
+  cursor:
+    pointer;
+
+  transition:
+    opacity
+      1.2s ease,
+    transform
+      0.5s ease;
+
+}
+
+
+.hidden-photo.visible {
+
+  opacity:
+    0.85;
+
+  pointer-events:
+    auto;
+
+}
+
+
+.hidden-photo.visible:hover {
+
+  opacity:
+    1;
+
+  transform:
+    rotate(-2deg)
+    translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+   DRAWER / CABINET
+   BETWEEN BED AND DESK
+   ========================================================= */
+
+
+.drawer {
+
+  left:
+    43%;
+
+  top:
+    29%;
+
+  width:
+    13%;
+
+  height:
+    27%;
+
+  border:
+    1px solid
+    #3c3b36;
+
+  transition:
+    border-color
+    0.4s ease;
+
+}
+
+
+.drawer:hover {
+
+  border-color:
+    #625f58;
+
+}
+
+
+.drawer span {
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  height:
+    1px;
+
+  background:
+    #34332f;
+
+}
+
+
+.drawer span:first-child {
+
+  top:
+    33%;
+
+}
+
+
+.drawer span:last-child {
+
+  top:
+    66%;
+
+}
+
+
+/*
+   Tiny handles
+*/
+
+.drawer::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    42%;
+
+  top:
+    16%;
+
+  width:
+    16%;
+
+  height:
+    1px;
+
+  background:
+    #5a574f;
+
+}
+
+
+.drawer::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    42%;
+
+  top:
+    49%;
+
+  width:
+    16%;
+
+  height:
+    1px;
+
+  background:
+    #5a574f;
+
+}
+
+
+
+/* =========================================================
+   NOTE
+   NOW ON TOP OF CABINET
+   ========================================================= */
+
+
+.floor-note {
+
+  position:
+    absolute;
+
+  /*
+      Same horizontal area
+      as cabinet.
+  */
+
+  left:
+    47%;
+
+  top:
+    31%;
+
+  z-index:
+    12;
+
+  width:
+    15px;
+
+  height:
+    10px;
+
+  padding:
+    0;
+
+  border:
+    1px solid
+    #5a574f;
+
+  background:
+    #4a4842;
+
+  opacity:
+    0.48;
+
+  transform:
+    rotate(9deg);
+
+  cursor:
+    pointer;
+
+  transition:
+    opacity
+      0.4s ease,
+    transform
+      0.4s ease;
+
+}
+
+
+.floor-note:hover {
+
+  opacity:
+    0.9;
+
+  transform:
+    rotate(5deg)
+    translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+   DESK
+   ========================================================= */
+
+
+.desk {
+
+  right:
+    10%;
+
+  top:
+    20%;
+
+  width:
+    27%;
+
+  height:
+    25%;
+
+}
+
+
+.desk-surface {
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  top:
+    0;
+
+  height:
+    1px;
+
+  background:
+    #56534d;
+
+}
+
+
+.desk-leg {
+
+  position:
+    absolute;
+
+  top:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    1px;
+
+  background:
+    #393832;
+
+}
+
+
+.leg-left {
+
+  left:
+    8%;
+
+}
+
+
+.leg-right {
+
+  right:
+    8%;
+
+}
+
+
+
+/* =========================================================
+   CLOCK
+   ========================================================= */
+
+
+.room-clock {
+
+  position:
+    absolute;
+
+  right:
+    15%;
+
+  top:
+    14%;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.12em;
+
+  color:
+    #4b4943;
+
+}
+
+
+
+/* =========================================================
+   WASTE BIN
+   UNDER DESK
+   ========================================================= */
+
+
+.waste-bin {
+
+  right:
+    17%;
+
+  top:
+    47%;
+
+  width:
+    23px;
+
+  height:
+    29px;
+
+  border-left:
+    1px solid
+    #34332f;
+
+  border-right:
+    1px solid
+    #34332f;
+
+  border-bottom:
+    1px solid
+    #34332f;
+
+  opacity:
+    0.42;
+
+  transition:
+    opacity
+    0.4s ease;
+
+}
+
+
+.waste-bin::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    -3px;
+
+  right:
+    -3px;
+
+  top:
+    0;
+
+  height:
+    1px;
+
+  background:
+    #3c3a35;
+
+}
+
+
+.waste-bin:hover {
+
+  opacity:
+    0.85;
+
+}
+
+
+
+/* =========================================================
+   DOOR
+   ========================================================= */
+
+
+.door {
+
+  right:
+    10%;
+
+  bottom:
+    0;
+
+  width:
+    11%;
+
+  height:
+    30%;
+
+  border-left:
+    1px solid
+    #46443f;
+
+  border-right:
+    1px solid
+    #46443f;
+
+  border-top:
+    1px solid
+    #46443f;
+
+}
+
+
+.door-handle {
+
+  position:
+    absolute;
+
+  left:
+    20%;
+
+  top:
+    54%;
+
+  width:
+    3px;
+
+  height:
+    3px;
+
+  border-radius:
+    50%;
+
+  background:
+    #55534d;
+
+}
+
+
+
+/* =========================================================
+   INSPECTOR
+   ========================================================= */
+
+
+.bedroom-inspector {
+
+  position:
+    absolute;
+
+  right:
+    7%;
+
+  top:
+    31%;
+
+  width:
+    21%;
+
+  min-height:
+    300px;
+
+  padding-left:
+    30px;
+
+  border-left:
+    1px solid
+    #292824;
+
+}
+
+
+.inspector-label {
+
+  margin-bottom:
+    42px;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    var(--faint);
+
+}
+
+
+.empty-inspection {
+
+  margin-top:
+    80px;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.08em;
+
+  color:
+    #44423d;
+
+}
+
+
+.room-record-name {
+
+  margin-bottom:
+    24px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    24px;
+
+  color:
+    var(--text);
+
+}
+
+
+.room-record-state {
+
+  margin-bottom:
+    9px;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.1em;
+
+  color:
+    #77746d;
+
+}
+
+
+.room-record-time {
+
+  margin-bottom:
+    34px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    8px;
+
+  color:
+    #55534d;
+
+}
+
+
+.room-record-description {
+
+  max-width:
+    220px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.9;
+
+  color:
+    #66635c;
+
+}
+
+
+
+/* =========================================================
+   ACTIVITY RECORD
+   ========================================================= */
+
+
+.room-timeline {
+
+  position:
+    absolute;
+
+  left:
+    8%;
+
+  bottom:
+    7%;
+
+}
+
+
+.timeline-title {
+
+  margin-bottom:
+    10px;
+
+  font-size:
+    6px;
+
+  letter-spacing:
+    0.18em;
+
+  color:
+    #3f3e39;
+
+}
+
+
+.timeline-values {
+
+  display:
+    flex;
+
+  gap:
+    17px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    7px;
+
+  color:
+    #55534d;
+
+}
+
+
+.missing-time {
+
+  color:
+    #35342f;
+
+  transition:
+    color
+    0.8s ease;
+
+}
+
+
+.missing-time.recovered {
+
+  color:
+    #817d73;
+
+}
+
+
+
+/* =========================================================
+   ROOM STATUS
+   ========================================================= */
+
+
+.room-status {
+
+  position:
+    absolute;
+
+  right:
+    52px;
+
+  bottom:
+    39px;
+
+  display:
+    flex;
+
+  gap:
+    15px;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.17em;
+
+  color:
+    #42413c;
+
+}
+
+
+.room-status.incomplete
+span:last-child {
+
+  color:
+    #766f67;
+
+}
+
+
+
+/* =========================================================
+   OVERLAYS
+   ========================================================= */
+
+
+.note-overlay,
+.photo-overlay {
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    100;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  background:
+    rgba(
+      17,
+      17,
+      15,
+      0.91
+    );
+
+  backdrop-filter:
+    blur(5px);
+
+  opacity:
+    0;
+
+  pointer-events:
+    none;
+
+  transition:
+    opacity
+    0.6s ease;
+
+}
+
+
+.note-overlay.visible,
+.photo-overlay.visible {
+
+  opacity:
+    1;
+
+  pointer-events:
+    auto;
+
+}
+
+
+
+/* =========================================================
+   NOTE PAPER
+   ========================================================= */
+
+
+.note-paper {
+
+  position:
+    relative;
+
+  width:
+    330px;
+
+  height:
+    210px;
+
+  padding:
+    45px;
+
+  background:
+    #c7c2b6;
+
+  color:
+    #272621;
+
+  transform:
+    rotate(-1deg);
+
+  box-shadow:
+    0
+    15px
+    60px
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+
+}
+
+
+.overlay-close {
+
+  position:
+    absolute;
+
+  top:
+    14px;
+
+  right:
+    18px;
+
+  border:
+    none;
+
+  background:
+    none;
+
+  color:
+    #69655d;
+
+  font-size:
+    17px;
+
+  cursor:
+    pointer;
+
+}
+
+
+.note-time {
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.12em;
+
+  color:
+    #68645d;
+
+}
+
+
+.note-text {
+
+  position:
+    absolute;
+
+  left:
+    45px;
+
+  bottom:
+    55px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    17px;
+
+  letter-spacing:
+    0.04em;
+
+}
+
+
+
+/* =========================================================
+   PHOTO BACK
+   ========================================================= */
+
+
+.photo-back {
+
+  position:
+    relative;
+
+  width:
+    390px;
+
+  height:
+    275px;
+
+  padding:
+    45px;
+
+  background:
+    #bdb8ad;
+
+  color:
+    #292823;
+
+  transform:
+    rotate(-1.5deg);
+
+  box-shadow:
+    0
+    20px
+    80px
+    rgba(
+      0,
+      0,
+      0,
+      0.45
+    );
+
+}
+
+
+.photo-time {
+
+  position:
+    absolute;
+
+  top:
+    30px;
+
+  right:
+    32px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  color:
+    #68645d;
+
+}
+
+
+.photo-message {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    47%;
+
+  width:
+    100%;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  text-align:
+    center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    20px;
+
+  letter-spacing:
+    0.06em;
+
+}
+
+
+.photo-actions {
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  bottom:
+    30px;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    45px;
+
+}
+
+
+.photo-actions button {
+
+  border:
+    none;
+
+  background:
+    none;
+
+  color:
+    #625e56;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    0.12em;
+
+  cursor:
+    pointer;
+
+  transition:
+    color
+    0.3s ease;
+
+}
+
+
+.photo-actions button:hover {
+
+  color:
+    #1f1e1a;
+
+}
+
+
+
+/* =========================================================
+   "很好。"
+   ========================================================= */
+
+
+.bedroom-message-overlay {
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    300;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  background:
+    var(--bg);
+
+  opacity:
+    0;
+
+  pointer-events:
+    none;
+
+  transition:
+    opacity
+    1.2s ease;
+
+}
+
+
+.bedroom-message-overlay.visible {
+
+  opacity:
+    1;
+
+  pointer-events:
+    auto;
+
+}
+
+
+.bedroom-message {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    26px;
+
+  letter-spacing:
+    0.08em;
+
+  color:
+    var(--text);
+
+  opacity:
+    1;
+
+  transition:
+    opacity
+    1s ease;
+
+}
+
+
+
+/* =========================================================
+   COMPLETION
+   ========================================================= */
+
+
+.bedroom-completion {
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    500;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  background:
+    var(--bg);
+
+  opacity:
+    0;
+
+  pointer-events:
+    none;
+
+  transition:
+    opacity
+    1.3s ease;
+
+}
+
+
+.bedroom-completion.visible {
+
+  opacity:
+    1;
+
+  pointer-events:
+    auto;
+
+}
+
+
+.bedroom-completion-content {
+
+  text-align:
+    center;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    var(--muted);
+
+}
+
+
+.bedroom-complete-main,
+.bedroom-complete-second {
+
+  min-height:
+    30px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  color:
+    var(--text);
+
+}
+
+
+.bedroom-complete-main {
+
+  margin-top:
+    38px;
+
+  font-size:
+    clamp(
+      20px,
+      2.7vw,
+      34px
+    );
+
+}
+
+
+.bedroom-complete-second {
+
+  margin-top:
+    12px;
+
+  font-size:
+    clamp(
+      20px,
+      2.7vw,
+      34px
+    );
+
+}
+
+
+.bedroom-complete-access {
+
+  min-height:
+    20px;
+
+  margin-top:
+    50px;
+
+  color:
+    #66635c;
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+
+@media
+(max-width: 800px) {
+
+
+  body {
+
+    overflow:
+      auto;
+
+  }
+
+
+  .bedroom-screen {
+
+    min-height:
+      100vh;
+
+    height:
+      auto;
+
+    padding-bottom:
+      130px;
+
+  }
+
+
+  .bedroom-heading {
+
+    position:
+      relative;
+
+    left:
+      auto;
+
+    top:
+      auto;
+
+    padding:
+      120px
+      25px
+      0;
+
+  }
+
+
+  .room {
+
+    position:
+      relative;
+
+    left:
+      auto;
+
+    top:
+      auto;
+
+    width:
+      auto;
+
+    height:
+      330px;
+
+    margin:
+      60px
+      25px
+      0;
+
+  }
+
+
+  .bedroom-inspector {
+
+    position:
+      relative;
+
+    right:
+      auto;
+
+    top:
+      auto;
+
+    width:
+      auto;
+
+    margin:
+      65px
+      25px
+      0;
+
+  }
+
+
+  .room-timeline {
+
+    position:
+      relative;
+
+    left:
+      auto;
+
+    bottom:
+      auto;
+
+    margin:
+      60px
+      25px
+      0;
+
+  }
+
+
+  .timeline-values {
+
+    flex-wrap:
+      wrap;
+
+  }
+
+
+  .room-status {
+
+    position:
+      relative;
+
+    right:
+      auto;
+
+    bottom:
+      auto;
+
+    margin:
+      45px
+      25px;
+
+  }
+
+}

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>PLATFORM — PRIVATE ARCHIVE</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/platform.css"
+  >
+</head>
+
+
+<body class="platform-body">
+
+
+  <!-- =====================================================
+       RETURN
+       ===================================================== -->
+
+  <a
+    class="return-button"
+    href="../index.html#archive"
+  >
+    ← RETURN
+  </a>
+
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="platform-header">
+
+    <div class="archive-number">
+      ARCHIVE 02
+    </div>
+
+    <div class="archive-title">
+      PLATFORM
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       SYSTEM INFORMATION
+       ===================================================== -->
+
+  <aside class="system-info">
+
+    <div class="system-heading">
+      TRANSIT RECORD
+    </div>
+
+    <div class="system-row">
+      <span>NETWORK</span>
+      <span>TTC</span>
+    </div>
+
+    <div class="system-row">
+      <span>LINE</span>
+      <span>01</span>
+    </div>
+
+    <div class="system-row">
+      <span>RECORDS</span>
+      <span>07</span>
+    </div>
+
+    <div class="system-row">
+      <span>VERIFIED</span>
+      <span>07</span>
+    </div>
+
+    <div class="system-row status-row">
+      <span>STATUS</span>
+
+      <span id="systemStatus">
+        CONSISTENT
+      </span>
+    </div>
+
+  </aside>
+
+
+
+  <!-- =====================================================
+       RECORD DATABASE
+       ===================================================== -->
+
+  <main class="platform-main">
+
+    <div class="record-label">
+      LINE 1 / YONGE–UNIVERSITY
+    </div>
+
+
+    <div class="record-head">
+
+      <span>
+        RECORD
+      </span>
+
+      <span>
+        DESTINATION
+      </span>
+
+      <span>
+        DIRECTION
+      </span>
+
+      <span>
+        STATUS
+      </span>
+
+    </div>
+
+
+    <!-- 01 -->
+
+    <button
+      class="train-record"
+      data-record="01"
+      data-place="FINCH"
+      data-direction="NORTHBOUND"
+      data-route="north"
+      type="button"
+    >
+
+      <span class="record-number">
+        01
+      </span>
+
+      <span>
+        FINCH
+      </span>
+
+      <span>
+        NORTHBOUND
+      </span>
+
+      <span>
+        VERIFIED
+      </span>
+
+    </button>
+
+
+    <!-- 02 -->
+
+    <button
+      class="train-record"
+      data-record="02"
+      data-place="UNION"
+      data-direction="SOUTHBOUND"
+      data-route="south"
+      type="button"
+    >
+
+      <span class="record-number">
+        02
+      </span>
+
+      <span>
+        UNION
+      </span>
+
+      <span>
+        SOUTHBOUND
+      </span>
+
+      <span>
+        VERIFIED
+      </span>
+
+    </button>
+
+
+    <!-- 03 -->
+
+    <button
+      class="train-record"
+      data-record="03"
+      data-place="FINCH"
+      data-direction="NORTHBOUND"
+      data-route="north"
+      type="button"
+    >
+
+      <span class="record-number">
+        03
+      </span>
+
+      <span>
+        FINCH
+      </span>
+
+      <span>
+        NORTHBOUND
+      </span>
+
+      <span>
+        VERIFIED
+      </span>
+
+    </button>
+
+
+    <!-- 04 -->
+
+    <button
+      class="train-record"
+      data-record="04"
+      data-place="UNION"
+      data-direction="SOUTHBOUND"
+      data-route="south"
+      type="button"
+    >
+
+      <span class="record-number">
+        04
+      </span>
+
+      <span>
+        UNION
+      </span>
+
+      <span>
+        SOUTHBOUND
+      </span>
+
+      <span>
+        VERIFIED
+      </span>
+
+    </button>
+
+
+    <!-- 05 -->
+
+    <button
+      class="train-record"
+      data-record="05"
+      data-place="FINCH"
+      data-direction="NORTHBOUND"
+      data-route="north"
+      type="button"
+    >
+
+      <span class="record-number">
+        05
+      </span>
+
+      <span>
+        FINCH
+      </span>
+
+      <span>
+        NORTHBOUND
+      </span>
+
+      <span>
+        VERIFIED
+      </span>
+
+    </button>
+
+
+    <!-- 06 -->
+
+    <button
+      class="train-record"
+      data-record="06"
+      data-place="UNION"
+      data-direction="SOUTHBOUND"
+      data-route="south"
+      type="button"
+    >
+
+      <span class="record-number">
+        06
+      </span>
+
+      <span>
+        UNION
+      </span>
+
+      <span>
+        SOUTHBOUND
+      </span>
+
+      <span>
+        VERIFIED
+      </span>
+
+    </button>
+
+
+    <!-- 07
+         Visually identical to every other record.
+    -->
+
+    <button
+      class="train-record"
+      data-record="07"
+      data-place="FINCH"
+      data-direction="SOUTHBOUND"
+      data-route="south"
+      data-discrepancy="label"
+      type="button"
+    >
+
+      <span class="record-number">
+        07
+      </span>
+
+      <span>
+        FINCH
+      </span>
+
+      <span>
+        SOUTHBOUND
+      </span>
+
+      <span>
+        VERIFIED
+      </span>
+
+    </button>
+
+
+    <div
+      class="record-feedback"
+      id="recordFeedback"
+    >
+      SELECT A RECORD
+    </div>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       ROUTE REFERENCE
+       ===================================================== -->
+
+  <section class="route-reference">
+
+    <div class="route-heading">
+      ROUTE REFERENCE
+    </div>
+
+
+    <div class="direction-label">
+      NORTHBOUND
+    </div>
+
+
+    <div class="route-map">
+
+      <div class="station major">
+        FINCH
+      </div>
+
+      <div class="route-line"></div>
+
+      <div class="route-arrow">
+        ↑
+      </div>
+
+      <div class="route-line short"></div>
+
+      <div class="station">
+        BLOOR–YONGE
+      </div>
+
+      <div class="route-line short"></div>
+
+      <div class="route-arrow">
+        ↓
+      </div>
+
+      <div class="route-line"></div>
+
+      <div class="station major">
+        UNION
+      </div>
+
+    </div>
+
+
+    <div class="direction-label south">
+      SOUTHBOUND
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       RECORD INSPECTOR
+       ===================================================== -->
+
+  <section
+    class="inspector"
+    id="inspector"
+  >
+
+    <div class="inspector-panel">
+
+      <div
+        class="inspector-label"
+        id="inspectorLabel"
+      >
+        RECORD 01
+      </div>
+
+
+      <div class="inspector-line"></div>
+
+
+      <div class="inspector-field">
+
+        <button
+          class="field-name"
+          id="destinationLabel"
+          type="button"
+        >
+          DESTINATION
+        </button>
+
+        <span id="inspectorPlace">
+          FINCH
+        </span>
+
+      </div>
+
+
+      <div class="inspector-field">
+
+        <span>
+          DIRECTION
+        </span>
+
+        <span id="inspectorDirection">
+          NORTHBOUND
+        </span>
+
+      </div>
+
+
+      <div class="inspector-field">
+
+        <span>
+          STATUS
+        </span>
+
+        <span id="recordStatus">
+          VERIFIED
+        </span>
+
+      </div>
+
+
+      <div class="inspector-actions">
+
+        <button
+          class="trace-button"
+          id="traceRoute"
+          type="button"
+        >
+          TRACE ROUTE
+        </button>
+
+        <button
+          class="close-inspector"
+          id="closeInspector"
+          type="button"
+        >
+          CLOSE
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       TRACE ROUTE
+       ===================================================== -->
+
+  <section
+    class="trace-overlay"
+    id="traceOverlay"
+  >
+
+    <div class="trace-content">
+
+      <div
+        class="trace-label"
+        id="traceLabel"
+      >
+        RECORD 01 / ROUTE TRACE
+      </div>
+
+
+      <div
+        class="trace-route"
+        id="traceRouteVisual"
+      >
+      </div>
+
+
+      <div
+        class="trace-status"
+        id="traceStatus"
+      >
+        CALCULATING
+      </div>
+
+
+      <button
+        class="trace-return"
+        id="traceReturn"
+        type="button"
+      >
+        RETURN TO RECORD
+      </button>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       COMPLETION
+       ===================================================== -->
+
+  <section
+    class="platform-complete"
+    id="platformComplete"
+  >
+
+    <div class="complete-small">
+      ARCHIVE 02 / COMPLETE
+    </div>
+
+
+    <div class="complete-message">
+
+      <span>
+        The record was correct.
+      </span>
+
+      <span>
+        The label wasn't.
+      </span>
+
+    </div>
+
+
+    <div class="complete-next">
+      ARCHIVE 03 / ACCESS RESTORED
+    </div>
+
+  </section>
+
+
+
+  <!--
+
+      transit records verified.
+
+      values correct.
+      directions correct.
+
+      record_07:
+      field_label: incorrect
+
+      source_08:
+      unindexed
+
+  -->
+
+
+  <script src="../js/platform.js"></script>
+
+</body>
+
+</html>

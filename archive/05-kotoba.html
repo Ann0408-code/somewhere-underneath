@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>05 / ことば</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/global.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/kotoba.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!--
+
+      version_01: translated
+      version_02: translated
+      version_03: translated
+      version_04: translated
+
+      source_08:
+      language: null
+
+  -->
+
+
+  <main class="screen kotoba-screen">
+
+
+    <!-- RETURN -->
+
+    <a
+      class="return-button"
+      href="../index.html#archive"
+    >
+      <span>←</span>
+      RETURN
+    </a>
+
+
+
+    <!-- TOP RIGHT -->
+
+    <div class="kotoba-meta">
+      LANGUAGE RECORD
+    </div>
+
+
+
+    <!-- ===================================================
+         TITLE
+         =================================================== -->
+
+    <section class="kotoba-heading">
+
+      <div class="archive-number">
+        ARCHIVE 05
+      </div>
+
+      <h1>
+        ことば
+      </h1>
+
+      <div class="heading-line"></div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         LANGUAGE LIST
+         =================================================== -->
+
+    <section class="language-list">
+
+      <button
+        class="language-item"
+        data-language="en"
+      >
+
+        <span class="language-number">
+          01
+        </span>
+
+        <span class="language-name">
+          ENGLISH
+        </span>
+
+      </button>
+
+
+      <button
+        class="language-item"
+        data-language="zh"
+      >
+
+        <span class="language-number">
+          02
+        </span>
+
+        <span class="language-name">
+          中文
+        </span>
+
+      </button>
+
+
+      <button
+        class="language-item"
+        data-language="ja"
+      >
+
+        <span class="language-number">
+          03
+        </span>
+
+        <span class="language-name">
+          日本語
+        </span>
+
+      </button>
+
+
+      <button
+        class="language-item"
+        data-language="de"
+      >
+
+        <span class="language-number">
+          04
+        </span>
+
+        <span class="language-name">
+          DEUTSCH
+        </span>
+
+      </button>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         TEXT VIEWER
+         =================================================== -->
+
+    <section
+      class="language-viewer"
+      id="languageViewer"
+    >
+
+      <div
+        class="viewer-language"
+        id="viewerLanguage"
+      >
+        SELECT VERSION
+      </div>
+
+
+      <div
+        class="viewer-text"
+        id="viewerText"
+      ></div>
+
+
+      <button
+        class="compare-button"
+        id="compareButton"
+      >
+        COMPARE
+      </button>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         STATUS
+         =================================================== -->
+
+    <aside class="language-status">
+
+      <div class="status-heading">
+        LANGUAGE RECORD
+      </div>
+
+
+      <div class="status-row">
+
+        <span>
+          VERSIONS
+        </span>
+
+        <span>
+          4
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <span>
+          SOURCE
+        </span>
+
+        <span>
+          1
+        </span>
+
+      </div>
+
+
+      <div class="status-divider"></div>
+
+
+      <div class="status-row status-translation">
+
+        <span>
+          TRANSLATION STATUS
+        </span>
+
+        <span id="translationStatus">
+          CONSISTENT
+        </span>
+
+      </div>
+
+
+      <div
+        class="status-message"
+        id="statusMessage"
+      ></div>
+
+    </aside>
+
+
+
+    <!-- BOTTOM -->
+
+    <div
+      class="kotoba-bottom-status"
+      id="bottomStatus"
+    >
+      4 VERSIONS VERIFIED
+    </div>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       LANGUAGE SELECTION FOR COMPARISON
+       ===================================================== -->
+
+  <div
+    class="compare-select-overlay"
+    id="compareSelectOverlay"
+  >
+
+    <div class="compare-select-window">
+
+      <div class="compare-select-label">
+        COMPARE WITH
+      </div>
+
+
+      <div
+        class="compare-language-options"
+        id="compareLanguageOptions"
+      ></div>
+
+
+      <button
+        class="cancel-compare"
+        id="cancelCompare"
+      >
+        CANCEL
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       COMPARISON
+       ===================================================== -->
+
+  <div
+    class="comparison-overlay"
+    id="comparisonOverlay"
+  >
+
+    <div class="comparison-window">
+
+
+      <div class="comparison-header">
+
+        <div
+          class="comparison-language-name"
+          id="comparisonLeftName"
+        ></div>
+
+
+        <div class="comparison-label">
+          ALIGNMENT
+        </div>
+
+
+        <div
+          class="comparison-language-name"
+          id="comparisonRightName"
+        ></div>
+
+      </div>
+
+
+
+      <div
+        class="comparison-body"
+        id="comparisonBody"
+      ></div>
+
+
+
+      <div class="comparison-footer">
+
+        <div
+          class="comparison-result"
+          id="comparisonResult"
+        >
+          ALIGNMENT COMPLETE
+        </div>
+
+
+        <button
+          class="close-comparison"
+          id="closeComparison"
+        >
+          CLOSE
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       INDEX INPUT
+       ===================================================== -->
+
+  <div
+    class="index-overlay"
+    id="indexOverlay"
+  >
+
+    <div class="index-window">
+
+
+      <div class="index-label">
+        INDEX REQUIRED
+      </div>
+
+
+      <div class="index-entry">
+
+        <input
+          id="indexLeft"
+          type="text"
+          maxlength="2"
+          inputmode="numeric"
+          autocomplete="off"
+          placeholder="__"
+        >
+
+
+        <span>
+          /
+        </span>
+
+
+        <input
+          id="indexRight"
+          type="text"
+          maxlength="2"
+          inputmode="numeric"
+          autocomplete="off"
+          placeholder="__"
+        >
+
+      </div>
+
+
+      <button
+        class="index-submit"
+        id="indexSubmit"
+      >
+        VERIFY
+      </button>
+
+
+      <div
+        class="index-response"
+        id="indexResponse"
+      ></div>
+
+
+      <button
+        class="index-close"
+        id="indexClose"
+      >
+        CANCEL
+      </button>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       RESTORED SENTENCE
+       ===================================================== -->
+
+  <div
+    class="sentence-overlay"
+    id="sentenceOverlay"
+  >
+
+    <div class="sentence-window">
+
+
+      <div class="sentence-meta">
+        SOURCE POSITION 08
+      </div>
+
+
+      <div
+        class="restored-sentence"
+        id="restoredSentence"
+      >
+        Ich wollte, dass du mich findest.
+      </div>
+
+
+      <button
+        class="translate-button"
+        id="translateButton"
+      >
+        TRANSLATE
+      </button>
+
+
+      <div
+        class="translation-response"
+        id="translationResponse"
+      ></div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       RESTORE SOURCE
+       ===================================================== -->
+
+  <div
+    class="restore-overlay"
+    id="restoreOverlay"
+  >
+
+    <div class="restore-window">
+
+
+      <div class="restore-question">
+        RESTORE SOURCE?
+      </div>
+
+
+      <div class="restore-options">
+
+        <button
+          id="restoreButton"
+        >
+          RESTORE
+        </button>
+
+
+        <button
+          id="ignoreButton"
+        >
+          IGNORE
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       SOURCE 08 REVEAL
+       ===================================================== -->
+
+  <div
+    class="source-overlay"
+    id="sourceOverlay"
+  >
+
+    <div class="source-window">
+
+
+      <div
+        class="source-versions"
+        id="sourceVersions"
+      >
+
+        <div>
+          <span>ENGLISH</span>
+          <span class="source-dash">—</span>
+        </div>
+
+        <div>
+          <span>中文</span>
+          <span class="source-dash">—</span>
+        </div>
+
+        <div>
+          <span>日本語</span>
+          <span class="source-dash">—</span>
+        </div>
+
+        <div>
+          <span>DEUTSCH</span>
+          <span class="source-dash">—</span>
+        </div>
+
+      </div>
+
+
+      <div
+        class="source-eight"
+        id="sourceEight"
+      >
+        SOURCE 08
+      </div>
+
+
+      <div
+        class="source-message"
+        id="sourceMessage"
+      ></div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       COMPLETION
+       ===================================================== -->
+
+  <div
+    class="kotoba-completion"
+    id="kotobaCompletion"
+  >
+
+    <div class="kotoba-completion-content">
+
+
+      <div
+        class="completion-top"
+        id="completionTop"
+      ></div>
+
+
+      <div
+        class="completion-main"
+        id="completionMain"
+      ></div>
+
+
+      <div
+        class="completion-source"
+        id="completionSource"
+      ></div>
+
+
+      <div
+        class="completion-access"
+        id="completionAccess"
+      ></div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <script src="../js/kotoba.js"></script>
+
+
+</body>
+
+</html>
